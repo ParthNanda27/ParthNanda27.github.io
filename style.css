@@ -1,66 +1,117 @@
+:root{
+  --bg: #fdfdfd;
+  --text: #222;
+  --muted: #bbb;
+  --accent: #0055aa;
+  --header-height-padding: 4rem; /* adjust to make header taller/shorter */
+}
+
 body {
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   line-height: 1.6;
-  color: #222;
-  background: #fdfdfd;
+  color: var(--text);
+  background: var(--bg);
 }
 
+/* ========================
+   HEADER (with background)
+   ======================== */
 header {
-  background: #111;
-  color: #fff;
+  position: relative;
+  padding: var(--header-height-padding) 1rem;
   text-align: center;
-  padding: 2rem 1rem;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* background image layer (60% opacity) */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;                         /* top:0; right:0; bottom:0; left:0; */
+  background: url("stars.jpg") center/cover no-repeat;
+  opacity: 0.6;                     /* 60% opacity for the image */
+  z-index: 0;
+}
+
+/* keep header content above the background image */
+header * {
+  position: relative;
+  z-index: 1;
 }
 
 header h1 {
-  margin-bottom: 0.3rem;
-  font-size: 2.2rem;
+  margin: 0 0 0.4rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
 
 header p {
-  font-size: 1.1rem;
-  color: #bbb;
+  margin: 0 0 1rem 0;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.9);
 }
 
+/* navigation links in header */
+nav {
+  margin-top: 0.6rem;
+}
 nav a {
   color: #fff;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.98rem;
+  opacity: 0.95;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
 
+/* container used for page sections */
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 2.25rem 1rem;
 }
 
+/* section headings */
 h2 {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #e6e6e6;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
   color: #111;
+  font-size: 1.4rem;
 }
 
+/* lists, links */
 ul {
   list-style-type: disc;
   margin-left: 1.5rem;
 }
-
 a {
-  color: #0055aa;
+  color: var(--accent);
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
+/* profile photo */
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 15px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border: 6px solid rgba(255,255,255,0.06); /* subtle border to help separation on bright images */
+}
+
+/* footer */
 footer {
   background: #111;
   color: #bbb;
@@ -70,13 +121,44 @@ footer {
   margin-top: 2rem;
 }
 
-.profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 15px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+/* small layout improvements */
+section#about {
+  background: #fff;
 }
 
+/* responsive tweaks */
+@media (max-width: 800px) {
+  header {
+    padding: 3rem 1rem;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav a {
+    margin: 0 0.6rem;
+    font-size: 0.92rem;
+  }
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    padding: 2.5rem 0.5rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  nav a {
+    margin: 0.25rem;
+    font-size: 0.88rem;
+  }
+}
