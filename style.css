@@ -34,6 +34,18 @@ header::before {
   opacity: 0.6;                     /* 60% opacity for the image */
   z-index: 0;
 }
+/* Gradient dark overlay for better text readability */
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.55)
+  );
+  z-index: 0;
+}
 
 /* keep header content above the background image */
 header * {
