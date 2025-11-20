@@ -50,9 +50,10 @@ header h1 {
 
 header p {
   margin: 0 0 1rem 0;
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.9);
+  font-size: 1.3rem;   /* increased from ~1.05rem */
+  color: rgba(255,255,255,0.95);
 }
+
 
 /* navigation links in header */
 nav {
