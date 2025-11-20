@@ -162,14 +162,13 @@ section#about {
     font-size: 0.88rem;
   }
 }
-/* Thin black outline for header text */
+/* Subtle thin outline for header text */
 header h1,
 header p,
 header nav a {
   text-shadow:
-    -1px -1px 0 #000,
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
+    0 0 2px #000,
+    0 0 1px #000;
 }
+
 
