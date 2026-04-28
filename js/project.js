@@ -16,8 +16,14 @@ async function loadProject() {
 
   container.innerHTML = `
     <h2>${project.title}</h2>
-    <p><strong>${project.org}</strong></p>
-    <p>${project.desc}</p>
+    <p class="project-org">${project.org}</p>
+
+    <img src="${project.image}" class="project-image"/>
+
+    <p>${project.details}</p>
+
+    <h3>Tech Stack</h3>
+    <p>${project.tech}</p>
   `;
 }
 
