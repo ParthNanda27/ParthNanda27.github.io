@@ -1,24 +1,21 @@
 async function loadProjects() {
-  const res = await fetch("data/projects.json");
-  const projects = await res.json();
+  try {
+    const res = await fetch("data/projects.json");
+    const projects = await res.json();
 
-  const container = document.getElementById("projects");
+    const container = document.getElementById("projects");
 
-  projects.forEach(p => {
-    const div = document.createElement("div");
-    div.className = "project-card";
+    projects.forEach(p => {
+      const div = document.createElement("div");
+      div.innerHTML = `<h3>${p.title}</h3>`;
+      container.appendChild(div);
+    });
 
-      div.innerHTML = `
-        <h3>${p.title}</h3>
-        <p><strong>${p.org}</strong></p>
-        <p>${p.desc}</p>
-        <a href="project.html?id=${p.id}">View Details →</a>
-      `;
-
-    container.appendChild(div);
-  });
+  } catch (e) {
+    document.getElementById("projects").innerHTML =
+      "<p style='color:red'>Error loading projects</p>";
+    console.error(e);
+  }
 }
 
-if (document.getElementById("projects")) {
-  loadProjects();
-}
+loadProjects();
