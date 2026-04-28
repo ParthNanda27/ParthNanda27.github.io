@@ -32,7 +32,7 @@ header::before {
   position: absolute;
   inset: 0;
   background: url("stars.jpg") center/cover no-repeat;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 0;
 }
 
