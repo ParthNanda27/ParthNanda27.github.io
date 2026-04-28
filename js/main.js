@@ -5,7 +5,7 @@ async function loadProjects() {
 
     const container = document.getElementById("projects");
 
-    projects.forEach(p => {
+    projects.forEach((p, index) => {
       const div = document.createElement("div");
       div.className = "project-card fade-up";
       div.style.animationDelay = `${index * 0.15}s`;
