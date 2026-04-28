@@ -1,0 +1,17 @@
+[
+  {
+    "title": "TEC Prediction with GNSS–Aditya-L1 & LSTM",
+    "org": "ISRO",
+    "desc": "LSTM-based TEC forecasting using GNSS and solar data."
+  },
+  {
+    "title": "Extended Kalman Filter for GPS Positioning",
+    "org": "ISRO",
+    "desc": "EKF framework for multi-dynamic GPS navigation systems."
+  },
+  {
+    "title": "Rocket Physics & GMAT Simulations",
+    "org": "STAR",
+    "desc": "Worked on propulsion, orbital simulations, and ascent dynamics."
+  }
+]
