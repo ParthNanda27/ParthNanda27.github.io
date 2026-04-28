@@ -7,14 +7,22 @@ async function loadProjects() {
 
     projects.forEach(p => {
       const div = document.createElement("div");
-      div.innerHTML = `<h3>${p.title}</h3>`;
+      div.className = "project-card";
+
+      div.innerHTML = `
+        <h3>${p.title}</h3>
+        <p><strong>${p.org}</strong></p>
+        <p>${p.desc}</p>
+        <a href="project.html?id=${p.id}">View Details →</a>
+      `;
+
       container.appendChild(div);
     });
 
-  } catch (e) {
+  } catch (err) {
     document.getElementById("projects").innerHTML =
       "<p style='color:red'>Error loading projects</p>";
-    console.error(e);
+    console.error(err);
   }
 }
 
