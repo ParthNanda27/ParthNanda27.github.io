@@ -409,3 +409,36 @@ nav a {
 .back-link:hover {
   opacity: 1;
 }
+
+
+/* ========================
+   ANIMATIONS
+   ======================== */
+
+/* Page fade-in */
+body {
+  animation: fadeInPage 0.8s ease;
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
