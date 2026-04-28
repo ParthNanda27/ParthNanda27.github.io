@@ -379,3 +379,12 @@ nav a {
   max-width: 800px;
   margin: auto;
 }
+
+#projects {
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(6px);
+}
