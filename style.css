@@ -357,3 +357,25 @@ section {
 nav a {
   margin: 0 1.2rem;
 }
+
+
+/* PROJECT PAGE */
+
+.project-org {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+}
+
+#project-detail {
+  max-width: 800px;
+  margin: auto;
+}
