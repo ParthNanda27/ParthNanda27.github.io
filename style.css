@@ -185,3 +185,24 @@ header nav a {
 }
 
 
+.project-card {
+  background: #ffffff;
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  transition: 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+  margin: 0 0 6px 0;
+}
+
+.project-card p {
+  margin: 4px 0;
+}
