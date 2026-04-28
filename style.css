@@ -220,60 +220,84 @@ footer {
 
 /* HERO BUTTONS */
 .hero-buttons {
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
 }
 
 .btn {
   display: inline-block;
   margin: 8px;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 22px;
+  border-radius: 8px;
   background: var(--accent);
   color: white;
-  font-weight: 500;
-  transition: 0.2s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: 0.25s ease;
+  box-shadow: 0 8px 25px rgba(77,163,255,0.3);
 }
 
 .btn:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(77,163,255,0.4);
 }
 
 .btn.secondary {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: none;
 }
 
 /* INTRO */
 .intro {
   text-align: center;
   max-width: 700px;
+  margin: auto;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 /* QUICK LINKS GRID */
 .quick-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 2rem;
 }
 
 .card-link {
   background: var(--card);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 24px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  transition: 0.25s ease;
+  transition: 0.3s ease;
+  position: relative;
 }
 
 .card-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
 }
 
 .card-link h3 {
-  margin-top: 0;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.card-link p {
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .card-link a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+section {
+  margin-bottom: 2rem;
 }
