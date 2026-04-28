@@ -388,3 +388,24 @@ nav a {
   background: rgba(18, 24, 38, 0.85);
   backdrop-filter: blur(6px);
 }
+
+
+.project-section {
+  margin-top: 2rem;
+}
+
+.project-section h3 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
