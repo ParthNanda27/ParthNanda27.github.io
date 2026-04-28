@@ -4,26 +4,17 @@
     "title": "TEC Prediction with GNSS–Aditya-L1 & LSTM",
     "org": "ISRO",
     "desc": "LSTM-based TEC forecasting using GNSS and solar data.",
-    "details": "Developed a full pipeline including STEC to VTEC conversion, feature engineering using solar data, and time-series modeling using LSTM networks.",
-    "tech": "Python, TensorFlow, GNSS, Aditya-L1 data",
-    "image": "project1.jpg"
+    "details": "Developed a full pipeline including STEC to VTEC conversion, feature engineering, and LSTM modeling.",
+    "tech": "Python, TensorFlow, GNSS",
+    "image": "stars.jpg"
   },
   {
     "id": "ekf-gps",
     "title": "Extended Kalman Filter for GPS Positioning",
     "org": "ISRO",
-    "desc": "EKF framework for multi-dynamic GPS navigation systems."
-    "details": "Developed a full pipeline including STEC to VTEC conversion, feature engineering using solar data, and time-series modeling using LSTM networks.",
-    "tech": "Python, TensorFlow, GNSS, Aditya-L1 data",
-    "image": "project1.jpg"
-  },
-  {
-    "id": "rp-gmat",
-    "title": "Rocket Physics & GMAT Simulations",
-    "org": "STAR",
-    "desc": "Worked on propulsion, orbital simulations, and ascent dynamics."
-    "details": "Developed a full pipeline including STEC to VTEC conversion, feature engineering using solar data, and time-series modeling using LSTM networks.",
-    "tech": "Python, TensorFlow, GNSS, Aditya-L1 data",
-    "image": "project1.jpg"
+    "desc": "EKF framework for GPS navigation.",
+    "details": "Implemented EKF with state modeling, noise handling, and optimization techniques.",
+    "tech": "Python, Kalman Filtering",
+    "image": "stars.jpg"
   }
 ]
