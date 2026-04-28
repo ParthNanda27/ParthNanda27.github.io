@@ -1,9 +1,11 @@
-:root{
-  --bg: #fdfdfd;
-  --text: #222;
-  --muted: #bbb;
-  --accent: #0055aa;
-  --header-height-padding: 4rem; /* adjust to make header taller/shorter */
+:root {
+  --bg: #0b0f1a;
+  --text: #e6e9ef;
+  --muted: #9aa4b2;
+  --accent: #4da3ff;
+  --card: #121826;
+  --border: #1f2a3a;
+  --header-height-padding: 5rem;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
 }
 
 /* ========================
-   HEADER (with background)
+   HEADER
    ======================== */
 header {
   position: relative;
@@ -25,132 +27,163 @@ header {
   overflow: hidden;
 }
 
-/* background image layer (60% opacity) */
 header::before {
   content: "";
   position: absolute;
-  inset: 0;                         /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   background: url("stars.jpg") center/cover no-repeat;
-  opacity: 0.6;                     /* 60% opacity for the image */
+  opacity: 0.5;
   z-index: 0;
 }
-/* Gradient dark overlay for better text readability */
+
 header::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.55)
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
   );
   z-index: 0;
 }
 
-/* keep header content above the background image */
 header * {
   position: relative;
   z-index: 1;
 }
 
 header h1 {
-  margin: 0 0 0.4rem 0;
-  font-size: 2.4rem;
+  margin: 0 0 0.5rem 0;
+  font-size: 2.6rem;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
 
 header p {
-  margin: 0 0 1rem 0;
-  font-size: 1.3rem;   /* increased from ~1.05rem */
-  color: rgba(255,255,255,0.95);
+  margin: 0 0 1.2rem 0;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
 }
 
-
-/* navigation links in header */
+/* NAV */
 nav {
   margin-top: 0.6rem;
 }
+
 nav a {
   color: #fff;
   margin: 0 1rem;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.98rem;
-  opacity: 0.95;
-}
-nav a:hover {
-  text-decoration: underline;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  transition: 0.2s ease;
 }
 
-/* container used for page sections */
+nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* ========================
+   LAYOUT
+   ======================== */
 .container {
   max-width: 900px;
   margin: auto;
-  padding: 2.25rem 1rem;
+  padding: 2.5rem 1rem;
 }
 
-/* section headings */
+/* HEADINGS */
 h2 {
-  border-bottom: 2px solid #e6e6e6;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  color: #111;
-  font-size: 1.4rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  font-size: 1.5rem;
 }
 
-/* lists, links */
-ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-}
+/* LINKS */
 a {
   color: var(--accent);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-/* profile photo */
+/* ========================
+   PROFILE IMAGE
+   ======================== */
 .profile-photo {
   width: 180px;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 15px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  border: 6px solid rgba(255,255,255,0.06); /* subtle border to help separation on bright images */
+  margin: 20px auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 4px solid var(--border);
 }
 
-/* footer */
+/* ========================
+   PROJECT CARDS
+   ======================== */
+.project-card {
+  background: var(--card);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.project-card h3 {
+  margin: 0 0 6px 0;
+  color: #ffffff;
+}
+
+.project-card p {
+  margin: 4px 0;
+  color: var(--muted);
+}
+
+/* ========================
+   FOOTER
+   ======================== */
 footer {
-  background: #111;
-  color: #bbb;
+  background: #05070d;
+  color: #888;
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+  border-top: 1px solid var(--border);
 }
 
-/* small layout improvements */
-section#about {
-  background: #fff;
-}
-
-/* responsive tweaks */
+/* ========================
+   RESPONSIVE
+   ======================== */
 @media (max-width: 800px) {
   header {
-    padding: 3rem 1rem;
+    padding: 3.5rem 1rem;
   }
+
   header h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
+
   nav a {
-    margin: 0 0.6rem;
-    font-size: 0.92rem;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
   }
+
   .profile-photo {
     width: 150px;
     height: 150px;
@@ -159,50 +192,22 @@ section#about {
 
 @media (max-width: 420px) {
   header {
-    padding: 2.5rem 0.5rem;
+    padding: 3rem 0.5rem;
   }
+
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
+
   nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.4rem;
   }
+
   nav a {
-    margin: 0.25rem;
-    font-size: 0.88rem;
+    margin: 0.2rem;
+    font-size: 0.85rem;
   }
-}
-/* Subtle thin outline for header text */
-header h1,
-header p,
-header nav a {
-  text-shadow:
-    0 0 2px #000,
-    0 0 1px #000;
-}
-
-
-.project-card {
-  background: #ffffff;
-  padding: 18px;
-  margin: 20px 0;
-  border-radius: 10px;
-  border: 1px solid #eaeaea;
-  transition: 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.project-card h3 {
-  margin: 0 0 6px 0;
-}
-
-.project-card p {
-  margin: 4px 0;
 }
