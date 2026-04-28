@@ -442,3 +442,8 @@ body {
     transform: translateY(0);
   }
 }
+
+
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
