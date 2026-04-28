@@ -11,7 +11,7 @@ async function loadProjects() {
 
       div.innerHTML = `
         <h3>${p.title}</h3>
-        <p><strong>${p.org}</strong></p>
+        <p class="project-org">${p.org}</p>
         <p>${p.desc}</p>
         <a href="project.html?id=${p.id}">View Details →</a>
       `;
