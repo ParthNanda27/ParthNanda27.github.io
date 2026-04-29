@@ -14,25 +14,14 @@ async function loadProject() {
     return;
   }
 
- container.innerHTML = `
+container.innerHTML = `
   <h2 class="fade-up">${project.title}</h2>
   <p class="project-org fade-up" style="animation-delay: 0.1s">${project.org}</p>
 
   <img src="${project.image}" class="project-image fade-up" style="animation-delay: 0.2s"/>
 
   <div class="project-section fade-up" style="animation-delay: 0.3s">
-    <h3>Overview</h3>
-    <p>${project.details}</p>
-  </div>
-
-  <div class="project-section fade-up" style="animation-delay: 0.4s">
-    <h3>Results</h3>
-    <p>${project.results}</p>
-  </div>
-
-  <div class="project-section fade-up" style="animation-delay: 0.5s">
-    <h3>Tech Stack</h3>
-    <p>${project.tech}</p>
+    ${project.content}
   </div>
 
   <a href="research.html" class="back-link fade-up" style="animation-delay: 0.5s">
