@@ -73,10 +73,10 @@ header p {
 
 .featured-card {
   display: flex;
-  gap: 25px;
+  gap: 20px;
   align-items: center;
   background: var(--card);
-  padding: 25px;
+  padding: 20px;
   border-radius: 16px;
   border: 1px solid var(--border);
 }
