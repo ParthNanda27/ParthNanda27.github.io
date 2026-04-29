@@ -1,18 +1,14 @@
 [
   {
-    "id": "tec-lstm",
-    "title": "TEC Prediction with GNSS–Aditya-L1 & LSTM",
-    "org": "ISRO",
-    "desc": "Time-series prediction of ionospheric TEC using GNSS and Aditya-L1 solar data.",
-    
-    "details": "This project develops a data-driven framework to predict ionospheric Total Electron Content (TEC) by integrating GNSS observations with solar activity data from Aditya-L1. The system combines ground-based GNSS measurements with space-based solar inputs to model the nonlinear coupling between solar activity and ionospheric behaviour.\n\nThe pipeline includes GNSS preprocessing (STEC to VTEC conversion, elevation filtering >30°, and median aggregation across satellites) and solar data extraction from SOLEXS (X-ray flux) and ASPEX (ion flux and plasma parameters). All datasets are temporally aligned and cleaned to form a unified time-series dataset.\n\nAn LSTM-based deep learning model is trained on 24-timestep sequences to capture temporal dependencies in TEC variation, incorporating both solar parameters and temporal features.",
-    
-    "results": "Achieved high prediction accuracy across locations: Ahmedabad (RMSE ≈ 3.61 TECU, MAPE ≈ 7.25%), Shimla (RMSE ≈ 2.77 TECU, MAPE ≈ 6.68%), and Trivandrum (RMSE ≈ 1.91 TECU, MAPE ≈ 3.69%). The model remained robust under noise injection (10–50%) and demonstrated cross-location generalization with MAPE ≈ 15%.",
-    
-    "tech": "Python • TensorFlow/Keras • Pandas • NumPy • CDFlib • Astropy • GNSS Data Processing • Time-Series Modeling",
-    
-    "image": "stars.jpg"
-  },
+  "id": "tec-lstm",
+  "title": "TEC Prediction with GNSS–Aditya-L1 & LSTM",
+  "org": "ISRO",
+  "desc": "Time-series prediction of ionospheric TEC using GNSS and Aditya-L1 solar data.",
+
+  "content": "<h3>Overview</h3><p>This project develops a data-driven framework to predict ionospheric Total Electron Content (TEC) by integrating GNSS observations with solar activity data from Aditya-L1. The work focuses on understanding the nonlinear coupling between solar dynamics and ionospheric behaviour using both statistical analysis and deep learning.</p><h3>Problem</h3><p>Ionospheric TEC variations significantly affect GNSS signal accuracy, causing delays and positioning errors in navigation systems. Traditional models lack the ability to capture short-term fluctuations driven by solar events such as flares and solar wind disturbances, making real-time prediction challenging.</p><h3>Data & Preprocessing</h3><ul><li>GNSS data from AAI stations (Ahmedabad, Trivandrum, Shimla)</li><li>STEC computed from dual-frequency measurements and converted to VTEC using mapping functions</li><li>Elevation filtering (>30°) and median aggregation across satellites for noise reduction</li><li>Solar data from Aditya-L1:<ul><li>SOLEXS: X-ray photon flux (2–22 keV)</li><li>ASPEX: Ion flux (TH1, TH2) and plasma parameters</li></ul></li><li>Time synchronization across datasets with ±5s tolerance</li><li>Interpolation and cleaning for continuous time-series generation</li></ul><h3>Methodology</h3><ul><li>Correlation analysis using Spearman and Mutual Information</li><li>Feature engineering with temporal inputs</li><li>24-timestep sequence modeling</li><li>LSTM (32 units) + Dropout + Dense layers</li></ul><h3>Results</h3><ul><li>Ahmedabad: RMSE ≈ 3.61 TECU, MAPE ≈ 7.25%</li><li>Shimla: RMSE ≈ 2.77 TECU, MAPE ≈ 6.68%</li><li>Trivandrum: RMSE ≈ 1.91 TECU, MAPE ≈ 3.69%</li><li>Robust under 10–50% noise</li><li>Cross-location generalization achieved (MAPE ≈ 15%)</li></ul><h3>Key Contributions</h3><ul><li>End-to-end TEC prediction pipeline</li><li>Fusion of GNSS and Aditya-L1 solar data</li><li>Deep learning-based ionospheric modeling</li><li>Robustness and generalization validation</li></ul><h3>Tech Stack</h3><p>Python • TensorFlow/Keras • Pandas • NumPy • CDFlib • Astropy</p>",
+
+  "image": "TEC.jpg"
+},
 
   {
     "id": "ekf-gps",
