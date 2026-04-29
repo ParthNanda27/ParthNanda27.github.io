@@ -71,20 +71,23 @@ header p {
   color: var(--accent);
 }
 
-.metrics {
+.featured-card {
   display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 3rem;
+  gap: 25px;
+  align-items: center;
+  background: var(--card);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
 }
 
-.metric h3 {
-  font-size: 2rem;
-  color: var(--accent);
+.featured-card img {
+  width: 250px;
+  border-radius: 10px;
 }
 
-.metric p {
-  color: var(--muted);
+.featured-card h3 {
+  margin-top: 0;
 }
 /* NAV */
 nav {
