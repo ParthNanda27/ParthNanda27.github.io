@@ -26,6 +26,11 @@ async function loadProject() {
   </div>
 
   <div class="project-section fade-up" style="animation-delay: 0.4s">
+    <h3>Results</h3>
+    <p>${project.results}</p>
+  </div>
+
+  <div class="project-section fade-up" style="animation-delay: 0.5s">
     <h3>Tech Stack</h3>
     <p>${project.tech}</p>
   </div>
