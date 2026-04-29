@@ -21,7 +21,16 @@ container.innerHTML = `
   <img src="${project.image}" class="project-image fade-up" style="animation-delay: 0.2s"/>
 
   <div class="project-section fade-up" style="animation-delay: 0.3s">
-    ${project.content}
+    ${project.content || `
+      <h3>Overview</h3>
+      <p>${project.details || "No details available."}</p>
+
+      <h3>Results</h3>
+      <p>${project.results || "No results available."}</p>
+
+      <h3>Tech Stack</h3>
+      <p>${project.tech || "No tech stack specified."}</p>
+    `}
   </div>
 
   <a href="research.html" class="back-link fade-up" style="animation-delay: 0.5s">
