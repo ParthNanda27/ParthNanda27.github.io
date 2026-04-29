@@ -65,6 +65,27 @@ header p {
   color: rgba(255,255,255,0.9);
 }
 
+.card-link i {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.metrics {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.metric h3 {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.metric p {
+  color: var(--muted);
+}
 /* NAV */
 nav {
   margin-top: 0.6rem;
