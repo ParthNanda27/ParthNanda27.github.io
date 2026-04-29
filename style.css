@@ -25,13 +25,11 @@ header {
   text-align: center;
   color: #fff;
   overflow: hidden;
+  background: url("stars.jpg") center/cover no-repeat;
+  background-attachment: fixed;
 }
 
-header::before {
-  background: url("stars.jpg") center/cover no-repeat;
-  transform: translateY(0);
-  will-change: transform;
-}
+
 
 header::after {
   content: "";
