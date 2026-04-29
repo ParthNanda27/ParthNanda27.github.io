@@ -16,11 +16,53 @@
     "org": "SAC-ISRO",
     "desc": "State estimation and noise-aware GPS positioning using EKF.",
     
-    "details": "Developed an Extended Kalman Filter (EKF) framework for GPS positioning by modeling nonlinear satellite-receiver dynamics and measurement noise. The system estimates receiver position and velocity using recursive prediction-update cycles.\n\nThe implementation includes state transition modeling, measurement linearization, and covariance propagation. Noise handling techniques were applied to improve estimation stability under uncertain signal conditions.",
-    
-    "results": "Improved positioning accuracy compared to basic filtering approaches, with stable convergence under noisy observations and dynamic conditions.",
-    
-    "tech": "Python • Kalman Filtering • State Estimation • Numerical Methods",
+    "content": "<h3>Overview</h3><p>This project develops an Extended Kalman Filter (EKF) framework for GPS-based positioning by modeling nonlinear satellite–receiver dynamics and measurement uncertainties. The work focuses on recursive state estimation under varying motion conditions, including stationary, low-dynamic, and high-dynamic scenarios.</p>
+
+<h3>Problem</h3><p>GPS positioning relies on nonlinear pseudorange measurements affected by multiple sources of error such as atmospheric delay, clock bias, multipath effects, and measurement noise. Classical linear methods fail to accurately estimate receiver position and velocity in dynamic environments, requiring a robust nonlinear estimation approach.</p>
+
+<h3>Modeling</h3><ul>
+<li>Nonlinear pseudorange measurement equations based on satellite–receiver geometry</li>
+<li>Linearization using Jacobian matrices for iterative estimation</li>
+<li>State vector including position, velocity, clock bias, and clock drift</li>
+<li>Dynamic models for:
+  <ul>
+    <li>Stationary systems (constant position)</li>
+    <li>Low-dynamic systems (constant velocity)</li>
+    <li>High-dynamic systems (acceleration and jerk modeling)</li>
+  </ul>
+</li>
+</ul>
+
+<h3>Methodology</h3><ul>
+<li>Initialization using least squares / Gauss–Newton method</li>
+<li>State prediction using system dynamics (F matrix)</li>
+<li>Measurement update using linearized observation model (H matrix)</li>
+<li>Covariance propagation and Kalman gain computation</li>
+<li>Recursive prediction–update cycle for real-time estimation</li>
+</ul>
+
+<h3>Noise & Uncertainty Handling</h3><ul>
+<li>Process noise modeling using covariance matrices</li>
+<li>Measurement noise incorporating DLL noise, atmospheric errors, and multipath</li>
+<li>Receiver clock bias modeled using stochastic processes</li>
+<li>Allan variance used for realistic clock error characterization</li>
+</ul>
+
+<h3>Results</h3><ul>
+<li>Accurate estimation of receiver position and velocity</li>
+<li>Stable convergence under noisy measurement conditions</li>
+<li>Improved robustness across stationary and dynamic scenarios</li>
+<li>Effective handling of nonlinearities in GPS measurements</li>
+</ul>
+
+<h3>Key Contributions</h3><ul>
+<li>Complete EKF-based GPS positioning framework</li>
+<li>Multi-dynamic system modeling (stationary → high dynamics)</li>
+<li>Integration of realistic noise and clock models</li>
+<li>Robust nonlinear state estimation implementation</li>
+</ul>
+
+<h3>Tech Stack</h3><p>Python • Numerical Methods • Kalman Filtering • State Estimation • Linear Algebra</p>"
     
     "image": "stars.jpg"
   }
