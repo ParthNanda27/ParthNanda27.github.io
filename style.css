@@ -459,9 +459,11 @@ body {
 }
 
 /* Slide-up animation */
+/* Fade + Blur Animation */
 .fade-up {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(25px);
+  filter: blur(6px);
   animation: fadeUp 0.8s ease forwards;
 }
 
@@ -469,10 +471,14 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+    filter: blur(0);
   }
 }
+.fade-up {
+  will-change: transform, opacity, filter;
+}
 
-
+/*-*/
 .project-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
