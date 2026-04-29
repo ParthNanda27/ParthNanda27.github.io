@@ -28,12 +28,9 @@ header {
 }
 
 header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
   background: url("stars.jpg") center/cover no-repeat;
-  opacity: 0.5;
-  z-index: 0;
+  transform: translateY(0);
+  will-change: transform;
 }
 
 header::after {
