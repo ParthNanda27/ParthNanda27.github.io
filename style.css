@@ -315,7 +315,7 @@ section {
   font-size: 0.95rem;
 }
 
-.card-link::before {
+.card-link::before {pointer-events: none;
   content: "";
   position: absolute;
   inset: 0;
