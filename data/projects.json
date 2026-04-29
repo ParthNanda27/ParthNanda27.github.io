@@ -3,18 +3,29 @@
     "id": "tec-lstm",
     "title": "TEC Prediction with GNSS–Aditya-L1 & LSTM",
     "org": "ISRO",
-    "desc": "LSTM-based TEC forecasting using GNSS and solar data.",
-    "details": "Developed a full pipeline including STEC to VTEC conversion, feature engineering, and LSTM modeling.",
-    "tech": "Python, TensorFlow, GNSS",
+    "desc": "Time-series prediction of ionospheric TEC using GNSS and Aditya-L1 solar data.",
+    
+    "details": "This project develops a data-driven framework to predict ionospheric Total Electron Content (TEC) by integrating GNSS observations with solar activity data from Aditya-L1. The system combines ground-based GNSS measurements with space-based solar inputs to model the nonlinear coupling between solar activity and ionospheric behaviour.\n\nThe pipeline includes GNSS preprocessing (STEC to VTEC conversion, elevation filtering >30°, and median aggregation across satellites) and solar data extraction from SOLEXS (X-ray flux) and ASPEX (ion flux and plasma parameters). All datasets are temporally aligned and cleaned to form a unified time-series dataset.\n\nAn LSTM-based deep learning model is trained on 24-timestep sequences to capture temporal dependencies in TEC variation, incorporating both solar parameters and temporal features.",
+    
+    "results": "Achieved high prediction accuracy across locations: Ahmedabad (RMSE ≈ 3.61 TECU, MAPE ≈ 7.25%), Shimla (RMSE ≈ 2.77 TECU, MAPE ≈ 6.68%), and Trivandrum (RMSE ≈ 1.91 TECU, MAPE ≈ 3.69%). The model remained robust under noise injection (10–50%) and demonstrated cross-location generalization with MAPE ≈ 15%.",
+    
+    "tech": "Python • TensorFlow/Keras • Pandas • NumPy • CDFlib • Astropy • GNSS Data Processing • Time-Series Modeling",
+    
     "image": "stars.jpg"
   },
+
   {
     "id": "ekf-gps",
     "title": "Extended Kalman Filter for GPS Positioning",
     "org": "ISRO",
-    "desc": "EKF framework for GPS navigation.",
-    "details": "Implemented EKF with state modeling, noise handling, and optimization techniques.",
-    "tech": "Python, Kalman Filtering",
+    "desc": "State estimation and noise-aware GPS positioning using EKF.",
+    
+    "details": "Developed an Extended Kalman Filter (EKF) framework for GPS positioning by modeling nonlinear satellite-receiver dynamics and measurement noise. The system estimates receiver position and velocity using recursive prediction-update cycles.\n\nThe implementation includes state transition modeling, measurement linearization, and covariance propagation. Noise handling techniques were applied to improve estimation stability under uncertain signal conditions.",
+    
+    "results": "Improved positioning accuracy compared to basic filtering approaches, with stable convergence under noisy observations and dynamic conditions.",
+    
+    "tech": "Python • Kalman Filtering • State Estimation • Numerical Methods",
+    
     "image": "stars.jpg"
   }
 ]
