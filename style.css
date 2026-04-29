@@ -225,27 +225,20 @@ footer {
 
 .btn {
   display: inline-block;
-  margin: 8px;
-  padding: 12px 22px;
-  border-radius: 8px;
-  background: var(--accent);
+  margin: 10px;
+  padding: 13px 26px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4da3ff, #1f6fff);
   color: white;
   font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 0.3px;
   transition: 0.25s ease;
-  box-shadow: 0 8px 25px rgba(77,163,255,0.3);
+  box-shadow: 0 10px 30px rgba(77,163,255,0.3);
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(77,163,255,0.4);
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: none;
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(77,163,255,0.5);
 }
 
 /* INTRO */
@@ -260,6 +253,14 @@ footer {
   font-size: 1.05rem;
 }
 
+
+.quick-links {
+  margin-top: 3rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
 /* QUICK LINKS GRID */
 .quick-links {
   display: grid;
@@ -269,22 +270,23 @@ footer {
 }
 
 .card-link {
-  background: var(--card);
-  padding: 24px;
-  border-radius: 14px;
+  background: rgba(18, 24, 38, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 26px;
+  border-radius: 16px;
   border: 1px solid var(--border);
   transition: 0.3s ease;
   position: relative;
 }
 
 .card-link:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
 }
 
 .card-link h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .card-link p {
@@ -292,18 +294,19 @@ footer {
   font-size: 0.95rem;
 }
 
-.card-link a {
-  display: inline-block;
-  margin-top: 12px;
-  font-weight: 500;
+.card-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at top, rgba(77,163,255,0.15), transparent);
+  opacity: 0;
+  transition: 0.3s;
 }
 
-section {
-  margin-bottom: 2rem;
+.card-link:hover::before {
+  opacity: 1;
 }
-
-
-
 /* ========================
    FINAL POLISH (ADD ONLY)
    ======================== */
@@ -446,4 +449,37 @@ body {
 
 .project-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* HERO ENHANCEMENT */
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 0.8px;
+}
+
+header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* subtle glow behind hero text */
+header::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.85)
+  );
+}
+
+
+.intro {
+  text-align: center;
+  max-width: 750px;
+  margin: auto;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: var(--muted);
 }
