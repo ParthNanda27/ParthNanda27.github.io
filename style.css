@@ -14,6 +14,7 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  background: radial-gradient(circle at top, #0d1324, #05070d);
 }
 
 /* ========================
