@@ -123,7 +123,24 @@ header p {
   margin-top: 0;
 }
 
+.intro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
 
+.intro-grid h3 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.intro-grid p {
+  font-size: 1rem;
+  color: var(--text);
+}
 .section {
   padding: 0 20px;
 }
