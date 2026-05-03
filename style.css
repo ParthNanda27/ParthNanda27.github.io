@@ -14,7 +14,12 @@ body {
   line-height: 1.6;
   color: var(--text);
 
-  background: radial-gradient(circle at top, #0d1324, #05070d);
+  background: radial-gradient(
+    circle at top,
+    #0f1830 0%,
+    #0b0f1a 40%,
+    #05070d 100%
+  );
 }
 
 /* ========================
@@ -372,7 +377,7 @@ footer {
 }
 
 .card-link {
-  background: rgba(18, 24, 38, 0.85);
+  background: rgba(18, 24, 38, 0.65);
   backdrop-filter: blur(8px);
   padding: 26px;
   border-radius: 16px;
@@ -443,6 +448,3 @@ body {
 }
 
 
-body {
-  background: radial-gradient(circle at top, red, black) !important;
-}
