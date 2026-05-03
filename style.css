@@ -16,6 +16,24 @@ body {
   background: var(--bg);
 }
 
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.scroll-indicator {
+  animation: bounce 1.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
 /* ========================
    HEADER
    ======================== */
