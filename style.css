@@ -70,6 +70,14 @@ header p {
   color: rgba(255,255,255,0.9);
 }
 
+.intro,
+.featured {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .card-link i {
   font-size: 1.4rem;
   margin-bottom: 12px;
