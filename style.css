@@ -641,3 +641,13 @@ header,
   align-items: center;
   justify-content: center;
 }
+
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
