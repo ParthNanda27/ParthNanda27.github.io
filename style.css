@@ -708,28 +708,19 @@ header::after {
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 
-body {
+/* ONLY homepage gets snap */
+.home {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
 
-header,
-.intro,
-.featured,
-#explore {
-  height: 100vh;
-  scroll-snap-align: start;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.section {
+/* ONLY homepage sections snap */
+.home header,
+.home .intro,
+.home .featured,
+.home #explore {
   height: 100vh;
   scroll-snap-align: start;
 
