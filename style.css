@@ -24,6 +24,7 @@ header {
   height: 100vh;
   min-height: 600px;
 
+  scroll-snap-align: start;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +35,6 @@ header {
   background: url("stars.jpg") center/cover no-repeat;
   background-attachment: fixed;
 }
-
 
 
 header::after {
@@ -106,7 +106,9 @@ header p {
 }
 
 
-
+.section {
+  padding: 0 20px;
+}
 /*about*/
 .about-section {
   max-width: 900px;
