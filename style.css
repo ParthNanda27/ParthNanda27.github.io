@@ -141,6 +141,14 @@ header p {
   font-size: 1rem;
   color: var(--text);
 }
+
+@media (max-width: 700px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .section {
   padding: 0 20px;
 }
