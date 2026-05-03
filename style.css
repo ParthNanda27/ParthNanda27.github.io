@@ -617,3 +617,27 @@ header::after {
   font-size: 1.1rem;
   color: var(--muted);
 }
+
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+header,
+.intro,
+.featured,
+#explore {
+  height: 100vh;
+  scroll-snap-align: start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
