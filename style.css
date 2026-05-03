@@ -441,3 +441,8 @@ body {
 .fade-up {
   will-change: transform, opacity, filter;
 }
+
+
+body {
+  background: radial-gradient(circle at top, red, black) !important;
+}
