@@ -152,6 +152,30 @@ header p {
 .section {
   padding: 0 20px;
 }
+
+
+.project-meta {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-meta span {
+  font-size: 0.8rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.project-result {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+
 /*about*/
 .about-section {
   max-width: 900px;
