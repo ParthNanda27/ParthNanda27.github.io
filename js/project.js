@@ -18,8 +18,9 @@ container.innerHTML = `
   <h2 class="fade-up">${project.title}</h2>
   <p class="project-org fade-up" style="animation-delay: 0.1s">${project.org}</p>
 
-  <img src="${project.image}" class="project-image fade-up" style="animation-delay: 0.2s"/>
-
+ <div class="project-image-wrapper fade-up" style="animation-delay: 0.2s">
+  <img src="${project.image}" class="project-image"/>
+</div>
   <div class="project-section fade-up" style="animation-delay: 0.3s">
     ${project.content || `
       <h3>Overview</h3>
