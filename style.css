@@ -441,4 +441,18 @@ body {
   will-change: transform, opacity, filter;
 }
 
+.project-image {
+  width: 100%;
+  max-width: 900px;
+
+  max-height: 500px;
+
+  object-fit: contain;
+
+  display: block;
+  margin: 2rem auto;
+
+  border-radius: 18px;
+}
+
 
